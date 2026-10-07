@@ -1,29 +1,28 @@
-# Phân tích phân khúc khách hàng hàng không
+# Phân tích phân khúc khách hàng hàng không ứng dụng K-Means & Decision Tree[cite: 6]
 
-Trong bối cảnh cạnh tranh gay gắt của ngành hàng không, việc thấu hiểu hành vi khách hàng là yếu tố sống còn. Thay vì tiếp thị đại trà gây lãng phí, dự án này tập trung khai thác khối dữ liệu bay khổng lồ để phân tích và phân khúc khách hàng ứng dụng thuật toán K-Means và Decision Tree.
+Dự án này thuộc về nhóm sinh viên Trường Đại học Kinh tế - Đại học Đà Nẵng[cite: 6]. Mục tiêu của dự án là khai phá dữ liệu khách hàng hàng không, ứng dụng học máy để gom cụm và phân lớp nhằm thấu hiểu hành vi, dự đoán xu hướng và đề xuất chiến lược Marketing cá nhân hóa[cite: 6].
 
-## 📂 Cấu trúc Repository
-* **`Code/`**: Chứa file Jupyter Notebook (`.ipynb`) minh họa toàn bộ quá trình xử lý dữ liệu, phân tích khám phá (EDA) và huấn luyện mô hình.
-* **`Data/`**: Chứa tập dữ liệu thô về hoạt động bay và lịch sử thẻ thành viên.
-* **`Docs/`**: File báo cáo phân tích chi tiết.
+## Author
+* Thiều Anh Thư[cite: 6]
+* Nguyễn Văn Thái Bảo[cite: 6]
+* Bùi Thành Anh[cite: 6]
+* Nguyễn Đức Khánh Toàn[cite: 6]
 
-## 🛠 Công cụ & Công nghệ
-* **Ngôn ngữ:** Python (sử dụng thư viện Pandas, NumPy, Scikit-learn).
-* **Mô hình thuật toán:** K-Means Clustering (phân nhóm khách hàng) và Decision Tree (trích xuất luật ra quyết định).
-* **Trực quan hóa:** Matplotlib/Seaborn (và Tableau nếu có sử dụng để xây dựng dashboard báo cáo).
+**Giảng viên hướng dẫn:** Lê Diên Tuấn[cite: 6]
 
-## 🎯 Quy trình phân tích
-1. **Tiền xử lý dữ liệu:** Làm sạch các giá trị thiếu, xử lý dữ liệu ngoại lai trong các cột chi phí, khoảng cách bay.
-2. **EDA (Exploratory Data Analysis):** Tìm hiểu phân phối và mối tương quan giữa hành vi đặt vé và hạng thẻ khách hàng.
-3. **Phân cụm với K-Means:** Chia tệp khách hàng thành các nhóm có đặc điểm tương đồng.
-4. **Phân loại với Decision Tree:** Tìm ra các nhân tố quan trọng nhất quyết định một khách hàng thuộc phân khúc nào.
+## Cấu trúc Repository
+* **`Code/`**: Chứa file Jupyter Notebook minh họa quá trình xử lý dữ liệu, phân tích khám phá và huấn luyện mô hình[cite: 6].
+* **`Data/`**: Chứa tập dữ liệu thô về hoạt động bay và lịch sử thẻ thành viên[cite: 6].
+* **`Docs/`**: File báo cáo phân tích chi tiết[cite: 6].
 
-## 💡 Kết quả & Đề xuất chiến lược
-*(Ghi chú ngắn gọn 2-3 điểm sáng giá nhất mà nhóm bạn tìm ra từ dữ liệu để thể hiện tư duy kinh doanh)*
-* **Nhóm khách hàng giá trị cao (Ví dụ):** Đặc điểm nhận diện là gì? Đề xuất chiến dịch chăm sóc khách hàng VIP để giữ chân.
-* **Nhóm khách hàng có nguy cơ rời bỏ (Ví dụ):** Đặc điểm nhận diện là gì? Đề xuất các gói khuyến mãi nhắm mục tiêu để kích cầu.
+## Công nghệ & Thuật toán
+* **Ngôn ngữ:** Python[cite: 6]
+* **Thuật toán:** K-Means Clustering, Fuzzy C-Means, Decision Tree, PCA[cite: 6]
+* **Kiểm định thống kê:** Shapiro-Wilk, Kruskal-Wallis, Mann-Whitney U[cite: 6]
 
-## 🚀 Hướng dẫn chạy dự án
-1. Clone repository về máy tính: `git clone https://github.com/mayonne1004/flight-customer-segmentation.git`
-2. Cài đặt các thư viện Python cần thiết.
-3. Mở file code trong thư mục `Code/` bằng Jupyter Notebook hoặc VS Code và chạy tuần tự các cell.
+## Kết quả chính
+* **Cụm 0 (Khách VIP):** Chiếm 65.3% số lượng khách hàng nhưng đóng góp tới 86.89% tổng điểm tích lũy của toàn hệ thống. Tần suất bay rất cao và tỷ lệ hủy thẻ cực thấp[cite: 6].
+* **Cụm 1 (Khách Ngủ đông):** Chiếm 14.1% số lượng, chỉ đóng góp 2.06% giá trị. Tỷ lệ hủy thẻ lên tới 75% và thời gian không bay kéo dài[cite: 6].
+* **Cụm 2 (Khách Tiềm năng):** Chiếm 20.6% số lượng, là khách hàng mới gia nhập nhưng hoạt động sôi nổi và có dư địa phát triển lớn[cite: 6].
+* **Mô hình dự đoán:** Cây quyết định phân loại tự động khách hàng mới đạt độ chính xác (Accuracy) 98%[cite: 6].
+
